@@ -1,0 +1,10 @@
+.details-page-container{
+    grid-column: 2;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    .details-img-wrapper{
+        max-width: 50%;
+    }
+}

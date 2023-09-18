@@ -1,0 +1,259 @@
+.app-header {
+    grid-template-columns: minmax(2em, 1fr) minmax(auto, 20fr) minmax(2em, 1fr);
+    padding: 18px;
+    border-bottom: 1px solid #efe;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: #f4f4f4;
+    z-index: 60;
+    @include for-mobile-layout {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 5px;
+ 
+ }
+
+    .header-content-container {
+        grid-column: 2;
+        grid-row: 1;
+        direction: rtl;
+        justify-content: flex-end;
+        gap:1em;
+        @include for-narrow-layout {
+            display: flex
+        }
+        .mobile-menu-svg {
+            display: none;
+            @include for-narrow-layout {
+                display: block;
+                fill: #222;
+                cursor: pointer;
+            }
+            @include for-mobile-layout {
+                width: 30px;
+                fill: #222;
+                cursor: pointer;
+         
+         }
+        }
+    }
+
+    .logo-container {
+        @include for-mobile-layout {
+        margin-left: -17px;
+     }
+
+        .logo-link {
+            flex-direction: column;
+            width: 120px;
+            height: 67px;
+            @include for-mobile-layout {
+                width: 100px;
+                height: 49px;
+         
+         }
+
+            .logo {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1/1;
+                border-radius: 60px;
+            }
+
+        }
+
+    }
+
+    .main-menu {
+        gap: 10px;
+
+        @include for-narrow-layout {
+            display: none;
+
+        }
+
+        .link-container {
+            .heaer-link {
+                color: #222;
+            }
+            .heaer-link:active{
+                color: #222;
+
+            } 
+            .about-link {
+                color: #222;
+
+            }
+        }
+
+    }
+
+    .action-btns {
+        grid-column: 2;
+        grid-row: 1;
+        align-items: center;
+        justify-content: end;
+
+        @include for-narrow-layout {
+            display: none;
+
+        }
+
+        .shopping-cart-container {
+            position: relative;
+           
+            .ligth-bulb {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: var(--clr1);
+                top: -16px;
+                right: 12px;
+                border-radius: 50px;
+                color: #fff;
+            }
+
+            .cart-svg {
+                margin-inline-end: 20px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .btn-signin-container {
+        align-items: center;
+        justify-content: center;
+        margin-inline-end: 10px;
+        z-index: 999;
+
+        .txt {
+            min-width: 107px;
+            text-decoration: none;
+        }
+
+        .signup-btn {
+            font-family: Circular-Med;
+            cursor: pointer;
+            user-select: none;
+            background-color: #222;
+            color: #fff;
+            opacity: 1;
+            border: none;
+            font-weight: 600;
+            font-size: 17px;
+            height: 34px;
+            max-width: 110px;
+            padding: 24px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+
+
+        }
+
+        .login-btn {
+            background-color: transparent;
+            color: #222;
+            border: 1px solid #222;
+            padding: 23px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    .user-space {
+        cursor: pointer;
+        position: relative;
+
+        .user-img-container {
+            width: 2.5em;
+            height: 2.5em;
+            background-color: var(--clr1);
+            border-radius: 100px;
+
+            .user-img {
+                color: #fff;
+                font-size: 1.1em;
+
+            }
+        }
+
+        .user-menu {
+            position: absolute;
+            min-width: 8em;
+
+            right: 0px;
+            background-color: #ececec;
+            border-radius: 13px;
+            padding: 0.5em 1em;
+
+            .logout-link {
+                margin: 0;
+                padding-block-end: 0.5em;
+                border-bottom: 1px solid rgb(135, 134, 134);
+
+            }
+        }
+    }
+   
+        .mobile-shopping-cart-container{
+            display: none;
+            @include for-narrow-layout {
+                display: block!important;
+            }
+            .shopping-cart-container {
+                position: absolute;
+                top: 35px;
+                right: 11.2%;
+                @include for-mobile-layout {
+                    top: 21.7%;
+                    right:15.2%;
+                }
+                @include for-270px {
+                    top: 24.7%;
+                    right: 16.2%;
+                }
+                @include for-245px {
+                    top: 24.7%;
+                    right: 18.2%;
+                }
+                .ligth-bulb {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: var(--clr1);
+                    top: -47%;
+              
+                    border-radius: 50px;
+                    color: #fff;
+                    font-size: .95em;
+                    @include for-mobile-layout {
+                        width: 15px;
+                        height: 15px;
+                        font-size: .8em;
+                        margin-top: .35em;
+                    }
+                }
+        
+                .cart-svg {
+                    margin-inline-start: auto;
+                    cursor: pointer;
+                    @include for-mobile-layout {
+                        width: 26px;
+                        height: 26px;
+                     
+                    }
+                    @include for-270px {
+                        width: 25px;
+                        height: 25px;
+                     
+                    }
+                }
+            }
+    
+        }
+        
+        }

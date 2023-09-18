@@ -1,0 +1,5 @@
+.items-list-container{
+    grid-template-columns: repeat(auto-fill, minmax(243px, 1fr));
+    gap: 23px;
+    row-gap: 45px;
+}
